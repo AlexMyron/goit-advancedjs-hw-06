@@ -12,7 +12,7 @@ type AllType = {
 };
 
 function compare<
-  T extends Pick<AllType, 'name' | 'position' | 'color' | 'weight'>
+  T extends Pick<AllType, keyof AllType>
 >(
   top: { name: string; color: string },
   bottom: { position: number; weight: number }
